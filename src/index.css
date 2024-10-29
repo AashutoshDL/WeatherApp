@@ -1,0 +1,102 @@
+/* App Container */
+.app {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #74ebd5, #9face6);
+    /* Gradient background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Search Input */
+.search {
+    margin-bottom: 20px;
+}
+
+.search input {
+    padding: 15px;
+    /* Increased padding for a larger input */
+    border: none;
+    /* Removed border for a cleaner look */
+    border-radius: 30px;
+    /* More rounded corners */
+    font-size: 18px;
+    /* Larger font size */
+    width: 300px;
+    /* Adjusted width */
+    transition: all 0.3s;
+    /* Smooth transition for focus effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+.search input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    /* Glow effect on focus */
+}
+
+/* Result Section */
+.result {
+    background-color: white;
+    border-radius: 12px;
+    /* Slightly more rounded */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow for depth */
+    padding: 30px;
+    /* Increased padding */
+    text-align: center;
+    width: 320px;
+    /* Slightly wider */
+    transition: transform 0.3s;
+    /* Smooth scale transition */
+}
+
+.result:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+/* Weather Details */
+.result h2 {
+    margin: 10px 0;
+    font-size: 28px;
+    /* Increased heading size */
+    color: #333;
+    text-transform: uppercase;
+    /* Uppercase text for emphasis */
+}
+
+.result p {
+    margin: 8px 0;
+    /* Increased margin for better spacing */
+    font-size: 18px;
+    /* Increased font size for details */
+    color: #555;
+}
+
+/* Error Message */
+.error {
+    color: #ff4d4d;
+    /* Soft red color */
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for depth */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search input {
+        width: 90%;
+        /* Responsive width */
+    }
+
+    .result {
+        width: 95%;
+        /* Responsive width */
+    }
+}
